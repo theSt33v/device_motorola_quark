@@ -47,6 +47,9 @@ on early-init
 
 on init
 
+    #IMS libshim
+    export LD_SHIM_LIBS /system/vendor/lib/lib-imsvt.so|libshims_ims.so
+    
     symlink /sdcard /storage/sdcard0
 
     # pstore
