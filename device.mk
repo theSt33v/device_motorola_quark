@@ -327,3 +327,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libshims_thermal \
     libshim_qcopt
+    
+# IMS
+PRODUCT_PACKAGES += \
+    libshims_ims
+ 
+    
+# Filesystem
+TARGET_ANDROID_FILESYSTEM_CONFIG_H := $(VENDOR_PATH)/android_filesystem_config.h
+
+
+
+
+ 
