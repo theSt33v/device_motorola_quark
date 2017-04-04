@@ -28,3 +28,11 @@ LOCAL_SHARED_LIBRARIES := libicuuc libicui18n
 LOCAL_MODULE := libshim_qcopt
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
+
+#From MSM8916-common
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := MediaBuffer.c
+LOCAL_SHARED_LIBRARIES := libstagefright_foundation
+LOCAL_MODULE := libshims_ims
+LOCAL_MODULE_TAGS := optional
+include $(BUILD_SHARED_LIBRARY)
