@@ -63,7 +63,8 @@ service ims_rtp_daemon /system/bin/ims_rtp_daemon
 
 on property:sys.ims.DATA_DAEMON_STATUS=1
    start ims_rtp_daemon
-
+   start imscmservice
+   
 # Config volte related prioperties
 service config-rcs-on /system/bin/sh /system/bin/rcs_config.sh on
     user root
