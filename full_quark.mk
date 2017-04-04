@@ -20,10 +20,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from quark device
 $(call inherit-product, device/motorola/quark/device.mk)
 
-# For android_filesystem_config.h
-PRODUCT_PACKAGES += \
-    fs_config_files
-
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := quark
 PRODUCT_NAME := full_quark
