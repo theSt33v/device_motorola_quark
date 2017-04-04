@@ -25,6 +25,15 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+#Added as per bhb27
+service imscmservice /system/bin/imscmservice
+    class main
+    user system
+    seclabel u:r:init:s0
+    group radio net_raw diag diag log
+    disabled
+#End of addition
+
 service imsqmidaemon /system/bin/imsqmidaemon
     class main
     user system
@@ -73,3 +82,4 @@ on property:sys.ims.rcs=1
 
 on property:sys.ims.rcs=0
    start config-rcs-off
+  
