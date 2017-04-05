@@ -27,7 +27,7 @@
 
 import init.qcom.usb.rc
 import init.qcom.power.rc
-# import init.mmi.volte.rc
+import init.mmi.volte.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -47,6 +47,9 @@ on early-init
 
 on init
 
+    #IMS libshim
+    export LD_SHIM_LIBS /system/vendor/lib/lib-imsvt.so|libshims_ims.so
+    
     symlink /sdcard /storage/sdcard0
 
     # pstore

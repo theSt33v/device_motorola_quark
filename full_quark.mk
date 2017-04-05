@@ -26,3 +26,4 @@ PRODUCT_NAME := full_quark
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := quark
 PRODUCT_MANUFACTURER := motorola
+
