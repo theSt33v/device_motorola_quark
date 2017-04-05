@@ -81,8 +81,7 @@ Preference.OnPreferenceChangeListener {
     private void updateState() {
         if (mSwitchAmbientDisplay != null) {
             int DozeValue = Settings.Secure.getInt(getActivity().getContentResolver(), Settings.Secure.DOZE_ENABLED,
-                getActivity().getResources().getBoolean(
-                    com.android.internal.R.bool.config_doze_enabled_by_default) ? 1 : 0);
+                getActivity().getResources().getBoolean(1) ? 1 : 0);
             mSwitchAmbientDisplay.setChecked(DozeValue != 0);
         }
         if (mNotificationManager.isNotificationPolicyAccessGranted() && mFlipClick) {
